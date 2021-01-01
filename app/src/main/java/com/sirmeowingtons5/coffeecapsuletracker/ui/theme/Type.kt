@@ -1,4 +1,4 @@
-package com.sirmeowingtons5.coffeecapsuletracker.ui
+package com.sirmeowingtons5.coffeecapsuletracker.ui.theme
 
 import androidx.compose.material.Typography
 import androidx.compose.ui.text.TextStyle
