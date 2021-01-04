@@ -1,5 +1,6 @@
 package com.sirmeowingtons5.coffeecapsuletracker.ui.screen.catalogue.components
 
+import androidx.compose.foundation.clickable
 import androidx.compose.foundation.layout.*
 import androidx.compose.foundation.shape.RoundedCornerShape
 import androidx.compose.material.Card
@@ -17,12 +18,16 @@ import com.sirmeowingtons5.coffeecapsuletracker.ui.theme.CoffeeCapsuleTrackerThe
 import dev.chrisbanes.accompanist.coil.CoilImage
 
 @Composable
-fun FeedCoffeeRow(item: CapsuleInfo) {
+fun FeedCoffeeRow(
+    item: CapsuleInfo,
+    onClick: () -> Unit
+) {
     FeedRow(
         imageUrl = item.capsule.capsuleImageLink,
         title = item.capsule.title,
         hint = item.capsule.aromaticProfile,
-        intensity = item.capsule.intensity
+        intensity = item.capsule.intensity,
+        onClick = onClick
     )
 }
 
@@ -32,11 +37,13 @@ fun FeedRow(
     title: String,
     hint: String?,
     intensity: Int,
+    onClick: () -> Unit
 ) {
     Card(
         shape = RoundedCornerShape(4.dp),
         elevation = 4.dp,
         modifier = Modifier
+            .clickable(onClick = onClick)
             .padding(8.dp)
             .fillMaxWidth()
     ) {
@@ -101,7 +108,8 @@ fun PreviewFeedCoffeeRowFullInfo() {
             imageUrl = "",
             title = "Costa-Rica",
             hint = "Fruity-Winey",
-            intensity = 4
+            intensity = 4,
+            onClick = {}
         )
     }
 }
@@ -114,7 +122,8 @@ fun PreviewFeedCoffeeRowMinimalistic() {
             imageUrl = "",
             title = "Costa-Rica",
             hint = null,
-            intensity = 0
+            intensity = 0,
+            onClick = {}
         )
     }
 }

@@ -37,7 +37,8 @@ object Libs {
         const val coreKtx = "androidx.core:core-ktx:1.5.0-alpha05"
 
         object Compose {
-            const val version = "1.0.0-alpha09"
+            private const val version = "1.0.0-alpha09"
+            private const val navigationVersion = "1.0.0-alpha04"
 
             const val foundation = "androidx.compose.foundation:foundation:$version"
             const val layout = "androidx.compose.foundation:foundation-layout:$version"
@@ -48,6 +49,8 @@ object Libs {
             const val animation = "androidx.compose.animation:animation:$version"
             const val tooling = "androidx.compose.ui:ui-tooling:$version"
             const val iconsExtended = "androidx.compose.material:material-icons-extended:$version"
+
+            const val navigation = "androidx.navigation:navigation-compose:$navigationVersion"
         }
 
         object Test {
