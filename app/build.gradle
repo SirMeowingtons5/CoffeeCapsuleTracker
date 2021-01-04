@@ -1,6 +1,5 @@
 import com.sirmeowingtons5.coffeecapsuletracker.buildsrc.Libs
 
-
 plugins {
 	id 'com.android.application'
 	id 'kotlin-android'
@@ -49,6 +48,10 @@ dependencies {
 	implementation Libs.Coroutines.core
 
 	implementation Libs.AndroidX.coreKtx
+
+	implementation Libs.Koin.core
+	implementation Libs.Koin.viewModel
+	implementation Libs.Koin.compose
 
 	implementation Libs.AndroidX.Compose.runtime
 	implementation Libs.AndroidX.Compose.foundation

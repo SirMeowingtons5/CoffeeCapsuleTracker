@@ -24,6 +24,15 @@ object Libs {
         const val test = "org.jetbrains.kotlinx:kotlinx-coroutines-test:$version"
     }
 
+    object Koin {
+        private const val version = "2.2.2"
+        const val core = "org.koin:koin-android:$version"
+        const val viewModel = "org.koin:koin-androidx-viewmodel:$version"
+        const val compose = "org.koin:koin-androidx-compose:$version"
+        const val scope = "org.koin:koin-androidx-scope:$version"
+        const val ext = "org.koin:koin-androidx-ext:$version"
+    }
+
     object AndroidX {
         const val coreKtx = "androidx.core:core-ktx:1.5.0-alpha05"
 

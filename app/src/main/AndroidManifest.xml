@@ -2,7 +2,10 @@
 <manifest xmlns:android="http://schemas.android.com/apk/res/android"
 	package="com.sirmeowingtons5.coffeecapsuletracker">
 
+	<uses-permission android:name="android.permission.INTERNET" />
+
 	<application
+		android:name=".ui.App"
 		android:allowBackup="true"
 		android:icon="@mipmap/ic_launcher"
 		android:label="@string/app_name"
@@ -12,7 +15,8 @@
 		<activity
 			android:name=".ui.MainActivity"
 			android:label="@string/app_name"
-			android:theme="@style/Theme.CoffeeCapsuleTracker.NoActionBar">
+			android:screenOrientation="portrait"
+			android:theme="@style/Theme.CoffeeCapsuleTracker">
 			<intent-filter>
 				<action android:name="android.intent.action.MAIN" />
 
