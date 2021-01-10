@@ -9,4 +9,5 @@ val domainModule = module {
     single { GetOwnedCapsulesUseCase(get(), get()) }
     single { UpdateCapsuleDataUseCase(get()) }
     single { MapCapsuleDataToInfoUseCase(get()) }
+    single { GetCapsuleInfoUseCase(get(), get()) }
 }

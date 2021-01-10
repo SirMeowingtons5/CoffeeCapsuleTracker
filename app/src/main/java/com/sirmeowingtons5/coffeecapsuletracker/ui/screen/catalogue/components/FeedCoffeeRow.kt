@@ -12,8 +12,8 @@ import androidx.compose.ui.Modifier
 import androidx.compose.ui.layout.ContentScale
 import androidx.compose.ui.tooling.preview.Preview
 import androidx.compose.ui.unit.dp
-import com.sirmeowingtons5.coffeecapsuletracker.domain.model.Capsule
 import com.sirmeowingtons5.coffeecapsuletracker.domain.model.CapsuleInfo
+import com.sirmeowingtons5.coffeecapsuletracker.ui.components.IntensityIndicator
 import com.sirmeowingtons5.coffeecapsuletracker.ui.theme.CoffeeCapsuleTrackerTheme
 import dev.chrisbanes.accompanist.coil.CoilImage
 
@@ -75,29 +75,6 @@ fun FeedRow(
             }
         }
     }
-}
-
-@Composable
-private fun IntensityIndicator(intensity: Int) {
-    val intensityFullSymbol = "■"
-    val intensityEmptySymbol = "□"
-    val intensityString = StringBuilder()
-
-    for (i in 0 until intensity) {
-        intensityString.append(intensityFullSymbol)
-    }
-
-    intensityString.append(" $intensity ")
-
-    for (i in intensity until Capsule.MAX_INTENSITY) {
-        intensityString.append(intensityEmptySymbol)
-    }
-
-    Text(
-        text = intensityString.toString(),
-        style = MaterialTheme.typography.caption,
-        maxLines = 1
-    )
 }
 
 @Preview
